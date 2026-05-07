@@ -1,65 +1,36 @@
 @import "tailwindcss";
 @plugin './hero.js';
-/* Note: You may need to change the path to fit your project structure */
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap'); */
 
 :root {
-    --background: 30 10% 6%;
-    --foreground: 43 50% 90%;
-
-    --card: 30 12% 10%;
-    --card-foreground: 43 50% 90%;
-
-    --popover: 30 12% 10%;
-    --popover-foreground: 43 50% 90%;
-
-    --primary: 43 80% 55%;
-    --primary-foreground: 30 20% 8%;
-
-    --secondary: 30 15% 16%;
-    --secondary-foreground: 43 40% 80%;
-
-    --muted: 30 10% 14%;
-    --muted-foreground: 35 15% 50%;
-
-    --accent: 35 70% 45%;
-    --accent-foreground: 43 50% 95%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 35 20% 18%;
-    --input: 35 15% 15%;
-    --ring: 43 80% 55%;
-
-    --radius: 0.5rem;
-
-    --gold: 43 80% 55%;
-    --gold-light: 43 70% 70%;
-    --gold-dark: 38 60% 35%;
-    --sand: 35 30% 25%;
-    --papyrus: 40 40% 85%;
-
-    --sidebar-background: 30 12% 8%;
-    --sidebar-foreground: 43 50% 90%;
-    --sidebar-primary: 43 80% 55%;
-    --sidebar-primary-foreground: 30 20% 8%;
-    --sidebar-accent: 35 20% 15%;
-    --sidebar-accent-foreground: 43 50% 90%;
-    --sidebar-border: 35 20% 18%;
-    --sidebar-ring: 43 80% 55%;
+    --background: 226 100% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 241 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 241 84% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 271 91% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 241 84% 65%;
+    --radius: 1.5rem;
 }
 
-
 @layer base {
-    * {
-      
-    }
-
     body {
-   background-color:   rgb(212,175,55)
+        background: linear-gradient(135deg, #f0f4ff 0%, #fdf2f8 100%);
+        color: hsl(var(--foreground));
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     h1,
@@ -68,39 +39,155 @@
     h4,
     h5,
     h6 {
-        font-family: 'Cinzel', serif;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.025em;
     }
 }
 
 @layer utilities {
     .font-display {
-        font-family: 'Cinzel', serif;
+        font-family: ui-sans-serif, system-ui, sans-serif;
     }
 
     .font-body {
-        font-family: 'Raleway', sans-serif;
+        font-family: ui-sans-serif, system-ui, sans-serif;
     }
 
-    .gold-gradient {
-        background: linear-gradient(135deg, hsl(43 80% 55%), hsl(38 60% 35%), hsl(43 70% 70%));
+    .primary-text {
+        color: hsl(241 84% 65%);
     }
 
-    .gold-text {
-        background: linear-gradient(135deg, hsl(43 80% 55%), hsl(43 70% 70%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    .accent-text {
+        color: hsl(271 91% 65%);
     }
 
-    .gold-border {
-        border: 1px solid hsl(43 80% 55% / 0.3);
+    .soft-shadow {
+        box-shadow: 0 20px 40px -15px hsl(241 84% 65% / 0.15);
     }
 
-    .gold-glow {
-        box-shadow: 0 0 20px hsl(43 80% 55% / 0.15), 0 0 40px hsl(43 80% 55% / 0.05);
+    .badge-shadow {
+        box-shadow: 0 10px 25px -5px hsl(241 84% 65% / 0.1);
     }
+}
 
-    .hieroglyph-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+
+
+
+
+/* footer css */
+
+.footer {
+    background-color: #1a1a2e;
+    color: #aaaaaa;
+    padding: 48px 40px 24px;
+    width: 100%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer-logo span {
+    color: #f5a623;
+}
+
+.footer-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+.social-row {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 0.5px solid #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #aaaaaa;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.social-btn:hover {
+    border-color: #f5a623;
+    color: #f5a623;
+}
+
+.col-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.col-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.col-links li {
+    font-size: 13px;
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.col-links li:hover {
+    color: #f5a623;
+}
+
+.footer-bottom {
+    border-top: 0.5px solid #333333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links span {
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bottom-links span:hover {
+    color: #f5a623;
 }

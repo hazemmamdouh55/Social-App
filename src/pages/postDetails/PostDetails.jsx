@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSinglepost } from '../../servises/posts.api'
+import { getSinglepost } from '../../servises/post/posts.api'
 import { useParams } from 'react-router'
 
 import { useQuery } from '@tanstack/react-query';

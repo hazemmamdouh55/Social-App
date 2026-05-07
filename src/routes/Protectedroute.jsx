@@ -18,6 +18,6 @@ export default function Protectedroute({ children }) {
         //     <Link to={"/login"} className='text-blue-600'>please login first</Link >
         // </div>
         // <Login />
-        <Navigate to={"/login"}></Navigate>
+        <Navigate to={"/welcome"}></Navigate>
     )
 }
